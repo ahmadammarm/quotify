@@ -1,6 +1,6 @@
 "use client"
 
-// components/QuoteCard.tsx
+import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 
 const QuoteCard = () => {
@@ -21,8 +21,20 @@ const QuoteCard = () => {
   };
 
   return (
-    <div className="wrapper bg-white rounded p-8">
-      <header className="text-2xl font-semibold mb-4">Quotes of the Day</header>
+    <div className="
+        w-full
+        max-w-2xl
+        mx-auto
+        bg-white
+        rounded-xl
+        shadow-xl
+        p-8
+        sm:p-10
+        md:p-12
+        lg:p-16
+        xl:p-20
+    ">
+      <header className="text-2xl ">Quotes of the Day</header>
       <div className="content">
         <div className="quote-area flex justify-center items-center mb-8">
           <i className="fas fa-quote-left text-xl mr-2"></i>
@@ -43,12 +55,7 @@ const QuoteCard = () => {
                 <i className="fas fa-copy"></i>
               </li>
             </ul>
-            <button
-              onClick={randomQuote}
-              className="bg-black text-white rounded px-4 py-2 text-lg transition duration-300 hover:bg-gray-800"
-            >
-              New Quote
-            </button>
+            <Button onClick={randomQuote}>New Quote</Button>
           </div>
         </div>
       </div>
