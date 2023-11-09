@@ -3,13 +3,13 @@
 import { Button } from "@/components/ui/button";
 import { Copy, CopyIcon, QuoteIcon, Volume, Volume2, VolumeIcon } from "lucide-react";
 import { useState } from "react";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 const QuoteCard = () => {
   const [quote, setQuote] = useState<string>(
     "Even what looks bad today, could be the best for tomorrow. We just have to be patient until His provisions arrive."
   );
-  const [author, setAuthor] = useState<string>("Ammar Musyaffa");
+  const [author, setAuthor] = useState<string>("Ahmad Ammar");
 
   const randomQuote = async () => {
     try {
@@ -24,19 +24,21 @@ const QuoteCard = () => {
 
   const playSound = () => {
     const speech = new SpeechSynthesisUtterance(quote);
+    const authorSpeech = new SpeechSynthesisUtterance(author);
     window.speechSynthesis.speak(speech);
+    window.speechSynthesis.speak(authorSpeech);
   };
 
   const copyQuote = () => {
     navigator.clipboard.writeText(quote);
-    toast.success("Quote copied to clipboard");
+    toast.success("Copied to clipboard!");
   };
 
 
   return (
     <div className="w-full max-w-2xl mx-auto p-8">
       <header className="text-center text-3xl font-bold mb-8">
-        Quotes of the Day
+        Quote of the Day
       </header>
       <div className="relative flex flex-col justify-between items-center h-64">
         <div className="flex flex-col justify-center items-center text-center text-lg mb-4">
@@ -54,13 +56,24 @@ const QuoteCard = () => {
                 className="border rounded-full p-2 cursor-pointer transition duration-300 ease-in-out mr-2"
                 onClick={playSound}
               >
-                <Volume2 />
+                <Volume2 className="
+                hover:text-teal-500
+                transition
+                duration-300
+                ease-in-out
+                " />
               </li>
               <li
                 className="border rounded-full p-2 cursor-pointer transition duration-300 ease-in-out"
                 onClick={copyQuote}
               >
-                <CopyIcon />
+                <CopyIcon className="
+                hover:text-teal-500
+                transition
+                duration-300
+                ease-in-out
+                " />
+                <Toaster />
               </li>
             </ul>
             <Button onClick={randomQuote}>New Quote</Button>
