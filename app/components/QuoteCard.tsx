@@ -39,15 +39,15 @@ const QuoteCard = () => {
         Quotes of the Day
       </header>
       <div className="relative flex flex-col justify-between items-center h-64">
-        <div className="flex flex-col justify-center items-center text-center text-lg mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12">
-          <QuoteIcon className="text-4xl mb-4" />
-          <p className="quote text-center text-2xl">{quote}</p>
-          <QuoteIcon className="text-4xl mt-4 transform rotate-180" />
+        <div className="flex flex-col justify-center items-center text-center text-lg mb-4">
+          <QuoteIcon className="text-2xl mb-4" />
+            <p className="quote text-center text-2xl">{quote}</p>
+          <QuoteIcon className="text-2xl mt-4 transform rotate-180" />
         </div>
         <div className="flex flex-col justify-center items-center text-center text-lg">
-          <span className="font-bold sm:my-4 md:my-6 lg:my-8 xl:my-10">{author}</span>
+          <span className="font-bold">{author}</span>
         </div>
-        <div className="absolute bottom-0 right-0 w-full flex justify-between items-center px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+        <div className="absolute bottom-0 right-0 w-full flex justify-between items-center px-4">
           <div className="flex justify-between items-center w-full">
             <ul className="flex items-center">
               <li
