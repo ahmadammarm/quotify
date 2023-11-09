@@ -31,7 +31,7 @@ const QuoteCard = () => {
 
   const copyQuote = () => {
     navigator.clipboard.writeText(quote);
-    toast.success("Copied to clipboard!");
+    toast.success("Copied to your clipboard!");
   };
 
 
