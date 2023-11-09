@@ -34,11 +34,11 @@ const QuoteCard = () => {
 
 
   return (
-    <div className="w-full max-w-2xl mx-auto rounded-xl shadow-xl p-8 sm:p-10 md:p-12 lg:p-16 xl:p-20">
-      <header className="text-center text-3xl font-bold mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20">
+    <div className="w-full max-w-2xl mx-auto p-8">
+      <header className="text-center text-3xl font-bold mb-8">
         Quotes of the Day
       </header>
-      <div className="relative flex flex-col justify-between items-center h-64 sm:h-72 md:h-80 lg:h-96 xl:h-112 mb-8 sm:mb-10 md:mb-12 lg:mb-16 xl:mb-20">
+      <div className="relative flex flex-col justify-between items-center h-64">
         <div className="flex flex-col justify-center items-center text-center text-lg mb-4 sm:mb-6 md:mb-8 lg:mb-10 xl:mb-12">
           <QuoteIcon className="text-4xl mb-4" />
           <p className="quote text-center text-2xl">{quote}</p>

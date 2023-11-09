@@ -16,41 +16,6 @@ const Navbar = () => {
       py-2
       ">
         <Logo />
-        <div className='flex'>
-          <Link 
-          href={'/about'}
-          className='
-            mr-5
-            hover:text-teal-500
-            transition
-            duration-300
-            ease-in-out
-            cursor-pointer
-          '
-          >About</Link>
-          <Link
-          href={'/product'}
-          className='
-            mr-5
-            hover:text-teal-500
-            transition
-            duration-300
-            ease-in-out
-            cursor-pointer
-          '
-          >Product</Link>
-          <Link
-          href={'/contact'}
-          className='
-            mr-5
-            hover:text-teal-500
-            transition
-            duration-300
-            ease-in-out
-            cursor-pointer
-          '
-          >Contact</Link>
-        </div>
         <div className="flex gap-4 items-center">
           <ThemeSwitcher />
         </div>
