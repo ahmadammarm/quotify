@@ -42,6 +42,8 @@ const QuoteCard = () => {
   };
 
   return (
+    <>
+    <Toaster />
     <div className="
       w-full 
       max-w-2xl 
@@ -89,7 +91,6 @@ const QuoteCard = () => {
                 onClick={copyQuote}
               >
                 <CopyIcon className="hover:text-teal-500 transition duration-300 ease-in-out" />
-                <Toaster />
               </li>
             </ul>
             <Button onClick={randomQuote} disabled={isLoading}>
@@ -100,6 +101,7 @@ const QuoteCard = () => {
       </div>
       <Footer />
     </div>
+    </>
   );
 };
 
