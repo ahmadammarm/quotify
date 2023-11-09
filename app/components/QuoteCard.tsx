@@ -1,7 +1,8 @@
-"use client"
+"use client";
 
-import { Button } from '@/components/ui/button';
-import { useState } from 'react';
+import { Button } from "@/components/ui/button";
+import { Copy, CopyIcon, QuoteIcon, Volume, Volume2, VolumeIcon } from "lucide-react";
+import { useState } from "react";
 
 const QuoteCard = () => {
   const [quote, setQuote] = useState<string>(
@@ -11,17 +12,18 @@ const QuoteCard = () => {
 
   const randomQuote = async () => {
     try {
-      const response = await fetch('https://api.quotable.io/random');
+      const response = await fetch("https://api.quotable.io/random");
       const data = await response.json();
       setQuote(data.content);
       setAuthor(data.author);
     } catch (error) {
-      console.error('Error fetching random quote:', error);
+      console.error("Error fetching random quote:", error);
     }
   };
 
   return (
-    <div className="
+    <div
+      className="
         w-full
         max-w-2xl
         mx-auto
@@ -33,26 +35,127 @@ const QuoteCard = () => {
         md:p-12
         lg:p-16
         xl:p-20
-    ">
-      <header className="text-2xl ">Quotes of the Day</header>
-      <div className="content">
-        <div className="quote-area flex justify-center items-center mb-8">
-          <i className="fas fa-quote-left text-xl mr-2"></i>
+    "
+    >
+      <header
+        className="
+            text-center
+            text-3xl
+            font-bold
+            mb-8
+            sm:mb-10
+            md:mb-12
+            lg:mb-16
+            xl:mb-20
+      "
+      >
+        Quotes of the Day
+      </header>
+      <div
+        className="
+            relative
+            flex
+            flex-col
+            justify-between
+            items-center
+            h-64
+            sm:h-72
+            md:h-80
+            lg:h-96
+            xl:h-112
+            mb-8
+            sm:mb-10
+            md:mb-12
+            lg:mb-16
+            xl:mb-20
+      "
+      >
+        <div
+          className="
+                flex
+                flex-col
+                justify-center
+                items-center
+                text-center
+                text-gray-800
+                text-lg
+                mb-4
+                sm:mb-6
+                md:mb-8
+                lg:mb-10
+                xl:mb-12
+        "
+        >
+          <QuoteIcon className="text-4xl text-gray-700 mb-4" />
           <p className="quote text-center text-2xl">{quote}</p>
-          <i className="fas fa-quote-right text-xl ml-2"></i>
+          <QuoteIcon className="text-4xl text-gray-700 mt-4 transform rotate-180" />
         </div>
-        <div className="author flex justify-end italic text-lg mb-4">
-          <span>__</span>
-          <span className="name">{author}</span>
+        <div
+          className="
+                flex
+                flex-col
+                justify-center
+                items-center
+                text-center
+                text-gray-600
+                text-lg
+        "
+        >
+          <span
+            className="
+                    text-gray-800
+                    font-bold
+                    sm:my-4
+                    md:my-6
+                    lg:my-8
+                    xl:my-10
+          "
+          >
+            {author}
+          </span>
         </div>
-        <div className="buttons border-t border-gray-300 pt-4 flex justify-between items-center">
-          <div className="features">
-            <ul className="flex">
-              <li className="sound border rounded-full p-2 mr-2 cursor-pointer">
-                <i className="fas fa-volume-up"></i>
+        <div
+          className="
+                absolute
+                bottom-0
+                right-0
+                w-full
+                flex
+                justify-between
+                items-center
+                px-4
+                sm:px-6
+                md:px-8
+                lg:px-10
+                xl:px-12
+        "
+        >
+          <div className="flex justify-between items-center w-full">
+            <ul className="flex items-center">
+              <li className="
+              border 
+              rounded-full 
+              p-2 
+              cursor-pointer
+              hover:bg-gray-100
+                transition
+                duration-300
+                ease-in-out
+                mr-2
+                ">
+                <Volume2 className="text-gray-800" />
               </li>
-              <li className="copy border rounded-full p-2 cursor-pointer">
-                <i className="fas fa-copy"></i>
+              <li className="
+              border 
+              rounded-full 
+              p-2 
+              cursor-pointer
+              hover:bg-gray-100
+                transition
+                duration-300
+                ease-in-out
+              ">
+                <CopyIcon className="text-gray-800" />
               </li>
             </ul>
             <Button onClick={randomQuote}>New Quote</Button>
