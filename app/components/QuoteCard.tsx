@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { Copy, CopyIcon, QuoteIcon, Volume, Volume2, VolumeIcon } from "lucide-react";
 import { useState } from "react";
@@ -20,13 +22,11 @@ const QuoteCard = () => {
     }
   };
 
-  // Fungsi untuk menyalakan suara
   const playSound = () => {
-    const audio = new Audio(`data:audio/mp3;base64,${quoteAudioBase64}`); // Ganti quoteAudioBase64 dengan data audio yang benar
-    audio.play();
+    const speech = new SpeechSynthesisUtterance(quote);
+    window.speechSynthesis.speak(speech);
   };
 
-  // Fungsi untuk menyalin kutipan ke clipboard
   const copyQuote = () => {
     navigator.clipboard.writeText(quote);
     toast.success("Quote copied to clipboard");
