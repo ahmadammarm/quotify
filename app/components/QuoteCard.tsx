@@ -27,7 +27,6 @@ const QuoteCard = () => {
         w-full
         max-w-2xl
         mx-auto
-        bg-white
         rounded-xl
         shadow-xl
         p-8
@@ -77,7 +76,6 @@ const QuoteCard = () => {
                 justify-center
                 items-center
                 text-center
-                text-gray-800
                 text-lg
                 mb-4
                 sm:mb-6
@@ -86,9 +84,9 @@ const QuoteCard = () => {
                 xl:mb-12
         "
         >
-          <QuoteIcon className="text-4xl text-gray-700 mb-4" />
+          <QuoteIcon className="text-4xl mb-4" />
           <p className="quote text-center text-2xl">{quote}</p>
-          <QuoteIcon className="text-4xl text-gray-700 mt-4 transform rotate-180" />
+          <QuoteIcon className="text-4xl mt-4 transform rotate-180" />
         </div>
         <div
           className="
@@ -97,13 +95,11 @@ const QuoteCard = () => {
                 justify-center
                 items-center
                 text-center
-                text-gray-600
                 text-lg
         "
         >
           <span
             className="
-                    text-gray-800
                     font-bold
                     sm:my-4
                     md:my-6
@@ -137,25 +133,23 @@ const QuoteCard = () => {
               rounded-full 
               p-2 
               cursor-pointer
-              hover:bg-gray-100
                 transition
                 duration-300
                 ease-in-out
                 mr-2
                 ">
-                <Volume2 className="text-gray-800" />
+                <Volume2 />
               </li>
               <li className="
               border 
               rounded-full 
               p-2 
               cursor-pointer
-              hover:bg-gray-100
                 transition
                 duration-300
                 ease-in-out
               ">
-                <CopyIcon className="text-gray-800" />
+                <CopyIcon />
               </li>
             </ul>
             <Button onClick={randomQuote}>New Quote</Button>
