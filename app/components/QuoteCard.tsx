@@ -1,15 +1,16 @@
 "use client"
 
 import { Button } from "@/components/ui/button";
-import { CopyIcon, QuoteIcon, Volume2 } from "lucide-react";
+import { CopyIcon, Volume2 } from "lucide-react";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import Footer from "./Footer";
 
 const QuoteCard = () => {
   const [quote, setQuote] = useState<string>(
     "Even what looks bad today, could be the best for tomorrow. We just have to be patient until His provisions arrive."
   );
-  const [author, setAuthor] = useState<string>("Someone");
+  const [author, setAuthor] = useState<string>("Ammar");
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const randomQuote = async () => {
@@ -41,24 +42,44 @@ const QuoteCard = () => {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-8">
+    <div className="
+      w-full 
+      max-w-2xl 
+      mx-auto 
+      p-8
+      mt-10
+      ">
       <header className="text-center text-3xl font-bold mb-8">
         Quote of the Day
       </header>
-      <div className="relative flex flex-col justify-between items-center h-64">
-        <div className="flex flex-col justify-center items-center text-center text-lg mb-4">
-          <QuoteIcon className="text-2xl mb-4" />
-          <p className="quote text-center text-2xl">{quote}</p>
-          <QuoteIcon className="text-2xl mt-4 transform rotate-180" />
-        </div>
+      <div className="relative flex flex-col justify-between items-center">
         <div className="flex flex-col justify-center items-center text-center text-lg">
-          <span className="font-bold">{author}</span>
+          <p className="quote text-center text-2xl italic">{quote}</p>
         </div>
-        <div className="absolute bottom-0 right-0 w-full flex justify-between items-center px-4">
+        <div className="flex flex-col justify-center items-center text-center text-lg mt-5">
+          <span className="
+          text-center
+          font-bold
+          ">- {author} -</span>
+        </div>
+        <div className="relative bottom-0 right-0 w-full flex justify-between items-center px-4 mt-10">
           <div className="flex justify-between items-center w-full">
-            <ul className="flex items-center">
+            <ul className="
+            flex 
+            items-center
+            ">
               <li
-                className="border rounded-full p-2 cursor-pointer transition duration-300 ease-in-out mr-2 hover:text-teal-500"
+                className="
+                border 
+                rounded-full 
+                p-2 
+                cursor-pointer 
+                transition 
+                duration-300 
+                ease-in-out 
+                mr-2 
+                hover:text-teal-500
+                "
                 onClick={playSound}
               >
                 <Volume2 className="hover:text-teal-500 transition duration-300 ease-in-out" />
@@ -77,6 +98,7 @@ const QuoteCard = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

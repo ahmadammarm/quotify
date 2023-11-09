@@ -19,6 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
@@ -28,8 +29,9 @@ export default function RootLayout({
         >
           <div className="flex flex-col min-h-screen min-w-full bg-background max-h-screen">
             <Navbar />
-            <main className="flex w-full flex-grow">{children}</main>
-            <Footer />
+            <main className="flex w-full flex-grow">
+              {children}
+            </main>
           </div>
         </ThemeProvider>
       </body>

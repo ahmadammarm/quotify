@@ -1,6 +1,5 @@
 import Logo from '@/components/Logo'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
-import Link from 'next/link'
 import React from 'react'
 
 const Navbar = () => {
