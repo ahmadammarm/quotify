@@ -53,7 +53,7 @@ const QuoteCard = () => {
           <div className="flex justify-between items-center w-full">
             <ul className="flex items-center">
               <li
-                className="border rounded-full p-2 cursor-pointer transition duration-300 ease-in-out mr-2"
+                className="border rounded-full p-2 cursor-pointer transition duration-300 ease-in-out mr-2 hover:text-teal-500"
                 onClick={playSound}
               >
                 <Volume2 className="
@@ -64,7 +64,7 @@ const QuoteCard = () => {
                 " />
               </li>
               <li
-                className="border rounded-full p-2 cursor-pointer transition duration-300 ease-in-out"
+                className="border rounded-full p-2 cursor-pointer transition duration-300 ease-in-out hover:text-teal-500"
                 onClick={copyQuote}
               >
                 <CopyIcon className="
