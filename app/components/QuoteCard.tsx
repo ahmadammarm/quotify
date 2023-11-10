@@ -65,7 +65,7 @@ const QuoteCard = () => {
           ">- {author} -</span>
         </div>
         <div className="relative bottom-0 right-0 w-full flex justify-between items-center px-4 mt-10">
-          <div className="flex justify-between items-center w-full">
+          <div className="flex justify-between items-center w-full mb-10">
             <ul className="
             flex 
             items-center
