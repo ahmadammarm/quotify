@@ -5,6 +5,8 @@ import { CopyIcon, Volume2 } from "lucide-react";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import Footer from "./Footer";
+import NextTopLoader from 'nextjs-toploader';
+
 
 const QuoteCard = () => {
   const [quote, setQuote] = useState<string>(
