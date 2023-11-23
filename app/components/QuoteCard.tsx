@@ -9,7 +9,7 @@ import Footer from "./Footer";
 
 const QuoteCard = () => {
   const [quote, setQuote] = useState<string>(
-    "Don't compare yourself with other people, remember everyone has their own way and everything that is measured will never be changed."
+    "Don't compare yourself with other people, everyone has their own way and everything that is measured will never be changed."
   );
   const [author, setAuthor] = useState<string>("Ammar");
   const [isLoading, setIsLoading] = useState<boolean>(false);
