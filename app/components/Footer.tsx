@@ -21,7 +21,7 @@ const Footer = () => {
         ease-in-out
         '
         target='_blank'
-        >ammar</a>
+        >Me</a>
         .</p>
       
     </div>
