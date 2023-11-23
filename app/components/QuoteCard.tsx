@@ -5,12 +5,11 @@ import { CopyIcon, Volume2 } from "lucide-react";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import Footer from "./Footer";
-import NextTopLoader from 'nextjs-toploader';
 
 
 const QuoteCard = () => {
   const [quote, setQuote] = useState<string>(
-    "Even what looks bad today, could be the best for tomorrow. We just have to be patient until His provisions arrive."
+    "Don't compare yourself with other people, remember everyone has their own way and everything that is measured will never be changed."
   );
   const [author, setAuthor] = useState<string>("Ammar");
   const [isLoading, setIsLoading] = useState<boolean>(false);
