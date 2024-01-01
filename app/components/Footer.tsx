@@ -12,7 +12,7 @@ const Footer = () => {
       text-center
       '>
         Made by <a href='
-        https://porto-ammar.vercel.app
+        https://ahmadammar.vercel.app
         ' className='
         text-teal-500
         hover:text-teal-600
